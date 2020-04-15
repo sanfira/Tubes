@@ -76,16 +76,18 @@ int main(){
         }
         newline=fgetc(seed);
     }
-
+  
+    fclose(seed);
+        
+    printf("\nloading--\n"); //seed file read
+    //seed
+    printf("Seed :\n);
     for(i=0;i<baris;i++){
         for(j=0; j<kolom;j++){
             printf("%c", GOL[i][j]);
         }
         printf("\n");
     }
-    fclose(seed);
-        
-    printf("\nloading--\n"); //seed file read
     quit=false;
     out=false;
 
