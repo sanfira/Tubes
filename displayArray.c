@@ -10,11 +10,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void displayArray()
+void displayArray(char line[2][5])
 {
     int i,j,baris,kolom;
-    char line[2][5];
-
+    
     system("cls");
     for(i=0;i<baris;i++)
     {
