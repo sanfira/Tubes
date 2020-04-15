@@ -1,4 +1,4 @@
-void Tick(char *GOL[][], int N, int M)
+void Tick(unsigned char *GOL[], int N, int M)
 {
     char NEXT[N][M];
     int X,Y,i,j,count;
@@ -36,9 +36,9 @@ void Tick(char *GOL[][], int N, int M)
             if (GOL[X%N][Y%M]=='-')
             {
                 if (count==3){
-                    NEXT[X%N][Y%M]='X'
+                    NEXT[X%N][Y%M]='X';
                 } else {
-                    NEXT[X%N][Y%M]='-'
+                    NEXT[X%N][Y%M]='-';
                 }
             }
         }
