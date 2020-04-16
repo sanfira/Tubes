@@ -10,8 +10,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void displayArray(unsigned char *GOL[], int i, int j, int baris, int kolom)
+void displayArray(unsigned char *GOL[], int baris, int kolom)
 {    
+    int i, j;
     system("cls");
     for(i=0;i<baris;i++)
     {
