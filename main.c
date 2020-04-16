@@ -90,7 +90,8 @@ int main(){
 
     printf("\nWelcome to\n");
     printf("GAME OF LIFE by E-1\n\n");
-    printf("--insert deskripsi program here--\n\n");
+    printf("--A simulation that automatically iterate--\n");
+    printf("--life of cells in a population--\n\n");
 
     while(load==true){
     printf("Input File Name:");
