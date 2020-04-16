@@ -150,14 +150,14 @@ int main(){
         scanf("%d", &menu);
         if (menu==1){
                 printf("Your option was : %d\n", menu);
-                printf("\nAnimating...\n\n"); //animate
+                printf("\nAnimating...\n\n"); //taroh fungsi animate disini
         }
         else if (menu==2){
                 printf("Your option was : %d\n", menu);
-                printf("\nIterating...\n\n"); //tick
+                printf("\nIterating...\n\n"); //taroh fungsi tick disini (ato iterate)
         }
         else if (menu==3){
-                printf("\nThe simulation has ended\n"); //unload and clear
+                printf("\nThe simulation has ended\n"); //kalo mau nge-free malloc disini aja, sekalian tutup file
                 quit=true;
                 while(out==false){
                     printf("\nInsert new seed?\n1. Yes\n2. No\n");
