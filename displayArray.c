@@ -10,14 +10,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void displayArray(unsigned char *line[], int i, int j, int baris, int kolom)
+void displayArray(unsigned char *GOL[], int i, int j, int baris, int kolom)
 {    
     system("cls");
     for(i=0;i<baris;i++)
     {
         for(j=0;j<kolom;j++)
         {
-            printf("%c", line);
+            printf("%c", GOL);
         }
     printf("\n");
     }
