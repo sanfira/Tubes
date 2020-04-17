@@ -1,7 +1,7 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
  * MODUL 8 – TUGAS BESAR
  * Kelompok : 1
- * Hari dan Tanggal : Rabu, 15 April 2020
+ * Hari dan Tanggal : Jumat, 17 April 2020
  * Asisten (NIM) : Berry (13216027)
  * Nama File : main.c
  * Deskripsi :
@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <time.h>
+#include <stdlib.h>
+#include <string.h>
 
 void Tick(unsigned char *GOL[], int N, int M)
 {
@@ -156,14 +158,8 @@ int main(){
     fclose(seed);
         
     printf("\nloading--\n"); //seed file read
-    //seed
-    printf("Seed :\n);
-    for(i=0;i<baris;i++){
-        for(j=0; j<kolom;j++){
-            printf("%c", GOL[i][j]);
-        }
-        printf("\n");
-    }
+    //seed printarray
+	
     quit=false;
     out=false;
 
@@ -173,10 +169,13 @@ int main(){
         if (menu==1){
                 printf("Your option was : %d\n", menu);
                 printf("\nAnimating...\n\n"); //taroh fungsi animate disini
+		animate(GOL,baris, kolom);
         }
         else if (menu==2){
                 printf("Your option was : %d\n", menu);
                 printf("\nIterating...\n\n"); //taroh fungsi tick disini (ato iterate)
+		Tick(GOL,baris,kolom);
+		//printarray
         }
         else if (menu==3){
                 printf("\nThe simulation has ended\n"); //kalo mau nge-free malloc disini aja, sekalian tutup file
