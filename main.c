@@ -136,12 +136,12 @@ int main(){ //main program
     printf("--life of cells in a population--\n\n");
 
     while(load==true){
-    printf("Input File Name(Name only, without '.txt'):");
-    scanf("%s", &filename);
-    strcat(filename, tipe);
-    seed = fopen(filename, "r");
+    printf("Input File Name(Name only, without '.txt'):"); 
+    scanf("%s", &filename); //input nama file
+    strcat(filename, tipe); //penambahan .txt pada akhir namafile
+    seed = fopen(filename, "r"); //membuka file
     
-    while(seed == NULL){
+    while(seed == NULL){ //jika file tidak ditemukan, maka diminta input ulang
         printf("Error Opening File\n");
         printf("Input File Name(Name only, without '.txt'):");
         scanf("%s", &filename);
@@ -150,28 +150,26 @@ int main(){ //main program
     } 
 
     i=0;
-    while(i<2){
+    while(i<2){//looping untuk membaca dua baris pertama
         fgets(line[i], 5, seed);
         i++;
     }
-    baris = atoi(line[0]);
-    kolom = atoi(line[1]);
-    printf("%d\n", baris);
-    printf("%d\n", kolom);
+    baris = atoi(line[0]);//mengubah baris pertama menjadi integer dan menyimpannya dalam variabel baris
+    kolom = atoi(line[1]); //mengubah baris kedua menjadi integer dan menyimpannya dalam variabel kolom
     
-    GOL = malloc(baris*sizeof(unsigned char*));
+    GOL = malloc(baris*sizeof(unsigned char*)); //pembuatan array GOL dengan ukuran yang disesuaikan baris dan kolom
     for(i=0; i<baris; i++){
         GOL[i]=malloc(kolom*sizeof(unsigned char));
     }
 
     for(i=0;i<baris;i++){
         for(j=0; j<kolom;j++){
-            GOL[i][j]=fgetc(seed);
+            GOL[i][j]=fgetc(seed); //menyimpan setiap char dalam array
         }
         newline=fgetc(seed);
     }
   
-    fclose(seed);
+    fclose(seed); //menutup file
         
     printf("\nloading--\n"); //seed file read
     displayArray(GOL,baris,kolom);
