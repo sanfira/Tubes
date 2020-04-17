@@ -13,6 +13,20 @@
 #include <stdlib.h>
 #include <string.h>
 
+void displayArray(unsigned char *GOL[], int baris, int kolom)
+{    
+    int i, j;
+    system("cls");
+    for(i=0;i<baris;i++)
+    {
+        for(j=0;j<kolom;j++)
+        {
+            printf("%c", GOL);
+        }
+    printf("\n");
+    }
+}
+
 void Tick(unsigned char *GOL[], int N, int M)
 {
     char NEXT[N][M];
