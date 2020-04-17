@@ -129,7 +129,6 @@ int main(){
         printf("Input File Name:");
         scanf("%s", &filename);
         strcat(filename, tipe);
-        printf("%s", filename);
         seed = fopen(filename, "r");
     } 
 
