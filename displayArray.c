@@ -18,7 +18,7 @@ void displayArray(unsigned char *GOL[], int baris, int kolom)
     {
         for(j=0;j<kolom;j++)
         {
-            printf("%c", GOL);
+            printf("%c", GOL[i][j]);
         }
     printf("\n");
     }
