@@ -196,6 +196,7 @@ int main(){ //main program
         else if (menu==3){
                 printf("\nThe simulation has ended\n"); //kalo mau nge-free malloc disini aja, sekalian tutup file
                 quit=true;
+		free(GOL);
                 while(out==false){
                     printf("\nInsert new seed?\n1. Yes\n2. No\n");
                     printf("Your option : ");
