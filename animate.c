@@ -15,10 +15,10 @@ void delay(int milli_seconds) {
     while (clock() < start_time + milli_seconds); 		//loop selama delay
 } 
 void animate () {
-	int baris,kolom,n,i;
+	int baris, kolom, n,i;
 	printf("How many iterations do you want?\n");
 	scanf("%d", &n);
-	while (n<=0) {
+	while (n<=0) {						//validasi
 		printf("Iteration must be greater than 0!\n");
 		printf("Please input the right number of iteration\n");
 		printf("How many iterations do you want?\n");
@@ -26,9 +26,10 @@ void animate () {
 	}
 	for (i=0; i<n; i++) {
 		printf("Printing iteration number %d\n\n", i+1);
-		tick(GOL, baris, kolom);		//import fungsi tick
-		displayArray(GOL, baris, kolom);	//import fungsi print, dihapus kalo udah termasuk di tick
-		delay(250);                             //delay 250ms
+		tick(GOL, baris, kolom);			//import fungsi tick
+		displayArray(GOL, baris, kolom);		//import fungsi print, dihapus kalo udah termasuk di tick
+		delay(250);
+		
 	}
 }
 
