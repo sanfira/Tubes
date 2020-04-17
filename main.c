@@ -4,9 +4,11 @@
  * Hari dan Tanggal : Jumat, 17 April 2020
  * Asisten (NIM) : Berry (13216027)
  * Nama File : main.c
- * Deskripsi :
+ * Deskripsi : Program mensimulasikan Game of Life by Conway dengan input berupa seed file txt berisi sel-sel berbentuk array 2 dimensi
+ * yang akan secara otomatis diiterasikan sesuai keinginan pengguna
  */
 
+//inisiasi library yang digunakan
 #include <stdio.h>
 #include <stdbool.h>
 #include <time.h>
@@ -113,7 +115,7 @@ void showmenu(){
     return;
 }
 
-int main(){
+int main(){ //main program
     int menu;
     bool quit=false;
     bool load=true;
