@@ -118,7 +118,7 @@ int main(){
     printf("--life of cells in a population--\n\n");
 
     while(load==true){
-    printf("Input File Name:");
+    printf("Input File Name(Name only, without '.txt'):");
     scanf("%s", &filename);
     strcat(filename, tipe);
     printf("%s\n", filename);
@@ -126,7 +126,7 @@ int main(){
     
     while(seed == NULL){
         printf("Error Opening File\n");
-        printf("Input File Name:");
+        printf("Input File Name(Name only, without '.txt'):");
         scanf("%s", &filename);
         strcat(filename, tipe);
         seed = fopen(filename, "r");
