@@ -136,7 +136,6 @@ int main(){
     printf("Input File Name(Name only, without '.txt'):");
     scanf("%s", &filename);
     strcat(filename, tipe);
-    printf("%s\n", filename);
     seed = fopen(filename, "r");
     
     while(seed == NULL){
