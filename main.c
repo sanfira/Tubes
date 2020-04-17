@@ -67,8 +67,8 @@ void Tick(unsigned char *GOL[], int N, int M)
 }
 
 void delay(int milli_seconds) {                         //buat delay
-    clock_t start_time = clock();						//menyimpan clock asli
-    while (clock() < start_time + milli_seconds); 		//loop selama delay
+    clock_t start_time = clock();			//menyimpan clock asli
+    while (clock() < start_time + milli_seconds); 	//loop selama delay
 } 
 void animate () {
 	int baris, kolom, n,i;
@@ -81,8 +81,9 @@ void animate () {
 		scanf("%d", &n);
 	}
 	for (i=0; i<n; i++) {
-		tick( *GOL[], baris, kolom);			//import fungsi tick
-		printArray( *GOL[], baris, kolom);		//import fungsi print, dihapus kalo udah termasuk di tick
+		printf("Printing iteration number %d\n\n", i+1);
+		tick(GOL, baris, kolom);			//import fungsi tick
+		displayArray(GOL, baris, kolom);		//import fungsi print, dihapus kalo udah termasuk di tick
 		delay(250);                             //delay 250ms
 	}
 }
