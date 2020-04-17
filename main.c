@@ -70,8 +70,8 @@ void delay(int milli_seconds) {                         //buat delay
     clock_t start_time = clock();			//menyimpan clock asli
     while (clock() < start_time + milli_seconds); 	//loop selama delay
 } 
-void animate () {
-	int baris, kolom, n,i;
+void animate (unsigned char *GOL[], int baris, int kolom ) {
+	int n,i;
 	printf("How many iterations do you want?\n");
 	scanf("%d", &n);
 	while (n<=0) {                                 //validasi
@@ -82,7 +82,7 @@ void animate () {
 	}
 	for (i=0; i<n; i++) {
 		printf("Printing iteration number %d\n\n", i+1);
-		tick(GOL, baris, kolom);			//import fungsi tick
+		Tick(GOL, baris, kolom);			//import fungsi tick
 		displayArray(GOL, baris, kolom);		//import fungsi print, dihapus kalo udah termasuk di tick
 		delay(250);                             //delay 250ms
 	}
@@ -158,7 +158,7 @@ int main(){
     fclose(seed);
         
     printf("\nloading--\n"); //seed file read
-    //seed printarray
+    displayArray(GOL,baris,kolom);
 	
     quit=false;
     out=false;
@@ -175,7 +175,7 @@ int main(){
                 printf("Your option was : %d\n", menu);
                 printf("\nIterating...\n\n"); //taroh fungsi tick disini (ato iterate)
 		Tick(GOL,baris,kolom);
-		//printarray
+		displayArray(GOL,baris,kolom);
         }
         else if (menu==3){
                 printf("\nThe simulation has ended\n"); //kalo mau nge-free malloc disini aja, sekalian tutup file
