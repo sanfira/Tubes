@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <time.h>
 
 void Tick(unsigned char *GOL[], int N, int M)
 {
@@ -61,6 +62,27 @@ void Tick(unsigned char *GOL[], int N, int M)
             GOL[j][i]=NEXT[j][i];
         }
     }
+}
+
+void delay(int milli_seconds) {                         //buat delay
+    clock_t start_time = clock();						//menyimpan clock asli
+    while (clock() < start_time + milli_seconds); 		//loop selama delay
+} 
+void animate () {
+	int baris, kolom, n,i;
+	printf("How many iterations do you want?\n");
+	scanf("%d", &n);
+	while (n<=0) {                                 //validasi
+		printf("Iteration must be greater than 0!\n");
+		printf("Please input the right number of iteration\n");
+		printf("How many iterations do you want?\n");
+		scanf("%d", &n);
+	}
+	for (i=0; i<n; i++) {
+		tick( *GOL[], baris, kolom);			//import fungsi tick
+		printArray( *GOL[], baris, kolom);		//import fungsi print, dihapus kalo udah termasuk di tick
+		delay(250);                             //delay 250ms
+	}
 }
 
 void showmenu(){
