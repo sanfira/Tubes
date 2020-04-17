@@ -4,8 +4,8 @@
  * Kelompok : 1
  * Hari dan Tanggal : Rabu, 15 April 2020
  * Asisten (NIM) : Berry (13216027)
- * Nama File : main.c
- * Deskripsi :
+ * Nama File : externalfile.c
+ * Deskripsi : untuk mengecek bagian program yang membaca input nama file dan memasukkan seed kedalam array
  */
 void ReadFile(){
     FILE *seed;
@@ -28,10 +28,10 @@ void ReadFile(){
         printf("Input Nama File:");
         scanf("%s", &filename);
         strcat(filename, tipe);
-        printf("%s", filename);
+ 
         seed = fopen(filename, "r");
     } 
-
+    printf("Opening %s\n",filename);
     i=0;
     while(i<2){
         fgets(line[i], 5, seed);
